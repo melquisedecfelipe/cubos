@@ -1,0 +1,32 @@
+.icon {
+  cursor: pointer;
+  color: #282430;
+}
+
+.paginate {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+
+  > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e6e4eb;
+    border-radius: 10px;
+    width: 31px;
+    height: 31px;
+    margin: 0 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: #282430;
+      color: white;
+    }
+  }
+
+  > .-active {
+    background: #282430;
+    color: white;
+  }
+}
