@@ -62,7 +62,7 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <div className="search-container">
+      <div className="home-search">
         <header>
           <Link to="/">FILM</Link>
         </header>
@@ -82,7 +82,7 @@ export default function Home() {
       </div>
 
       {films !== undefined && (
-        <div className="film-container">
+        <div className="home-content">
           <div className="film">
             <Films films={films} />
           </div>

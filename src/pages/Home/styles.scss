@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  > .search-container {
+  > .home-search {
     display: flex;
     flex-direction: column;
     padding: 20px 100px;
@@ -82,7 +82,7 @@
     }
   }
 
-  > .film-container {
+  > .home-content {
     padding: 20px 100px;
     height: 100vh;
     overflow-y: scroll;
@@ -110,11 +110,11 @@
   .home-container {
     grid-template-columns: 1fr;
 
-    > .search-container {
+    > .home-search {
       padding: 50px;
     }
 
-    > .film-container {
+    > .home-content {
       padding: 50px;
       height: 100%;
       overflow-y: hidden;
@@ -124,7 +124,7 @@
 
 @media screen and (max-width: 720px) {
   .home-container {
-    > .search-container {
+    > .home-search {
       padding: 20px;
 
       > header {
@@ -145,7 +145,7 @@
       }
     }
 
-    > .film-container {
+    > .home-content {
       padding: 20px;
 
       > .film {
