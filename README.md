@@ -1,24 +1,24 @@
 <h1 align="center">
-    <img alt="Film" src="https://res.cloudinary.com/dtifsqadc/image/upload/v1582133187/favicon_wbfnhx.png" />
+    <img alt="Film" src="https://res.cloudinary.com/dtifsqadc/image/upload/v1582134429/favicon_ysdt4z.png" />
     <br>
 </h1>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/Film.svg">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/film.svg">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/melquisedecfelipe/Film.svg">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/melquisedecfelipe/film.svg">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/melquisedecfelipe/Film.svg">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/melquisedecfelipe/film.svg">
 
-  <a href="https://github.com/melquisedecfelipe/Film/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/melquisedecfelipe/Film.svg">
+  <a href="https://github.com/melquisedecfelipe/film/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/melquisedecfelipe/film.svg">
   </a>
 
-  <a href="https://github.com/melquisedecfelipe/Film/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/melquisedecfelipe/Film.svg">
+  <a href="https://github.com/melquisedecfelipe/film/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/melquisedecfelipe/film.svg">
   </a>
 
-  <img alt="GitHub" src="https://img.shields.io/github/license/melquisedecfelipe/Film.svg">
+  <img alt="GitHub" src="https://img.shields.io/github/license/melquisedecfelipe/film.svg">
 </p>
 
 <p align="center">
@@ -47,10 +47,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/melquisedecfelipe/Film
+$ git clone https://github.com/melquisedecfelipe/film
 
 # Go into the repository
-$ cd Film
+$ cd film
 
 # Install dependencies
 $ npm i
