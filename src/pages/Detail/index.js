@@ -7,6 +7,7 @@ import api from '../../services/api';
 
 export default function Detail({ location }) {
   const [film, setFilm] = useState(undefined);
+  const [filmBg, setFilmBg] = useState('');
   const [youtube, setYoutube] = useState('');
 
   const { id } = location.state;
@@ -16,6 +17,15 @@ export default function Detail({ location }) {
     async function getFilm() {
       const { data } = await api.get(`movie/${id}?${queryString}`);
       setFilm(data);
+      setFilmBg(
+        `linear-gradient(120deg, rgba(255, 0, 199, .4) 0%, rgba(81, 0, 63, .4) 100%),
+        linear-gradient(120deg, rgba(0, 48, 173, .4) 0%, rgba(0, 7, 26, .4) 100%),
+        linear-gradient(rgba(0, 3, 70, .4) 0%, rgba(255, 0, 0, .4) 100%),
+        linear-gradient(60deg, rgba(0, 41, 255, .4) 0%, rgba(170, 0, 20, .4) 100%),
+        radial-gradient(100% 165% at 100% 100%, rgba(255, 0, 168, .4) 0%, rgba(0, 255, 71, .4) 100%),
+        radial-gradient(100% 150% at 0% 0%, rgba(255, 245, 0, .4) 0%, rgba(81, 213, 0, .4) 100%),
+        url(https://image.tmdb.org/t/p/original/${data.backdrop_path})`,
+      );
     }
 
     async function getYoutube() {
@@ -48,7 +58,7 @@ export default function Detail({ location }) {
           <div
             className="film-header"
             style={{
-              backgroundImage: `linear-gradient(120deg, rgba(255, 0, 199, .4) 0%, rgba(81, 0, 63, .4) 100%), linear-gradient(120deg, rgba(0, 48, 173, .4) 0%, rgba(0, 7, 26, .4) 100%), linear-gradient(rgba(0, 3, 70, .4) 0%, rgba(255, 0, 0, .4) 100%), linear-gradient(60deg, rgba(0, 41, 255, .4) 0%, rgba(170, 0, 20, .4) 100%), radial-gradient(100% 165% at 100% 100%, rgba(255, 0, 168, .4) 0%, rgba(0, 255, 71, .4) 100%), radial-gradient(100% 150% at 0% 0%, rgba(255, 245, 0, .4) 0%, rgba(81, 213, 0, .4) 100%), url(https://image.tmdb.org/t/p/original/${film.backdrop_path})`,
+              backgroundImage: filmBg,
             }}
           >
             <header>
