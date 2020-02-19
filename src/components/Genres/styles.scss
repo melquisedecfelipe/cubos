@@ -1,0 +1,11 @@
+.genres {
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+
+    > p {
+      font-size: 12px;
+      margin: 7.5px 7.5px 0 0;
+    }
+  }
+}
