@@ -1,5 +1,5 @@
 <h1 align="center">
-    Film
+    <img alt="Film" src="https://res.cloudinary.com/dtifsqadc/image/upload/v1582133187/favicon_wbfnhx.png" />
     <br>
 </h1>
 
@@ -39,6 +39,7 @@ This project was developed with the following technologies:
 - [React](https://reactjs.org/)
 - [React icons](https://react-icons.netlify.com/)
 - [React router](https://reacttraining.com/react-router/)
+- [Redux](https://redux.js.org/)
 
 ## :information_source: How To Use
 
