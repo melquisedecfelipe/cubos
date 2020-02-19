@@ -90,7 +90,7 @@
     > .film {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 30px;
+      grid-gap: 20px;
     }
 
     > .footer {
@@ -150,20 +150,6 @@
 
       > .film {
         grid-template-columns: 1fr;
-      }
-
-      > .footer {
-        > .register {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-
-          > .paginate {
-            margin-top: 20px;
-          }
-        }
       }
     }
   }
