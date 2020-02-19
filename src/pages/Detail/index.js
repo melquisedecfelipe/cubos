@@ -27,19 +27,19 @@ export default function Detail({ location }) {
     getYoutube();
   }, [id, queryString]);
 
-  function timeConvert(num) {
+  const timeConvert = num => {
     var hours = Math.floor(num / 60);
     var minutes = num % 60;
     return `${hours}h e ${minutes}m`;
-  }
+  };
 
-  function truncate(string, size) {
+  const truncate = (string, size) => {
     if (string.length > size) {
       return string.slice(0, size) + '...';
     } else {
       return string;
     }
-  }
+  };
 
   return (
     <div className="film-container">

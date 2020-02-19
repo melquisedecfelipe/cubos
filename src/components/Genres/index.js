@@ -20,6 +20,7 @@ function Genres({ id }) {
 
     getGenre();
   }, [id, queryString]);
+
   return (
     <div className="genres">
       <div>

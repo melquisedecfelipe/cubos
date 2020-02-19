@@ -7,17 +7,17 @@ import './styles.scss';
 import history from '../../services/history';
 
 function Film({ films }) {
-  function truncate(string, size) {
+  const truncate = (string, size) => {
     if (string.length > size) {
       return string.slice(0, size) + '...';
     } else {
       return string;
     }
-  }
+  };
 
-  function handleDetail(id) {
+  const handleDetail = id => {
     history.push(`/detail/${id}`, { id });
-  }
+  };
 
   return films !== undefined ? (
     films.map(elem => (

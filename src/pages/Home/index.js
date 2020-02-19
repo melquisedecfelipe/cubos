@@ -58,13 +58,13 @@ function Home({ films, setFilms, getAll }) {
     getFilms();
   }, [getAll, setFilms, genre, currentPage, queryString]);
 
-  function handleName(e) {
+  const handleName = e => {
     setName(e.target.value);
-  }
+  };
 
-  async function handleGenre(e) {
+  const handleGenre = e => {
     setGenre(e);
-  }
+  };
 
   const filteredFilms = films.filter(film => film.title.toLowerCase().includes(name.toLowerCase()));
 
