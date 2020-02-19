@@ -27,6 +27,20 @@ export default function Detail({ location }) {
     getYoutube();
   }, [id, queryString]);
 
+  function timeConvert(num) {
+    var hours = Math.floor(num / 60);
+    var minutes = num % 60;
+    return `${hours}h e ${minutes}m`;
+  }
+
+  function truncate(string, size) {
+    if (string.length > size) {
+      return string.slice(0, size) + '...';
+    } else {
+      return string;
+    }
+  }
+
   return (
     <div className="film-container">
       {film !== undefined && (
@@ -42,14 +56,17 @@ export default function Detail({ location }) {
             </header>
             <div>
               <div className="header">
-                <h2>{film.title}</h2>
-                <p>
-                  <strong>{film.vote_average}</strong>
-                  /10 | {new Date(film.release_date).toLocaleDateString('pt-BR')}
-                </p>
-                <div>
+                <h2 title={film.title}>{truncate(film.title, 20)}</h2>
+                <div className="info">
+                  <p>
+                    Score: <strong>{film.vote_average}</strong>
+                    /10
+                  </p>
+                  <p>Lançado: {new Date(film.release_date).toLocaleDateString('pt-BR')}</p>
+                </div>
+                <div className="genres">
                   {film.genres.map(genre => (
-                    <p key={genre.id}>{genre.name}</p>
+                    <p key={Math.random()}>{genre.name}</p>
                   ))}
                 </div>
               </div>
@@ -74,20 +91,10 @@ export default function Detail({ location }) {
                 <p>Idioma</p> <strong>{film.original_language.toUpperCase()}</strong>
               </div>
               <div>
-                <p>Duração</p> <strong>{film.runtime} minutos</strong>
+                <p>Duração</p> <strong>{timeConvert(film.runtime)}</strong>
               </div>
               <div>
                 <p>Orçamento</p>
-                <strong>
-                  {film.revenue.toLocaleString('pt-BR', {
-                    minimumFractionDigits: 2,
-                    style: 'currency',
-                    currency: 'BRL',
-                  })}
-                </strong>
-              </div>
-              <div>
-                <p>Receita</p>
                 <strong>
                   {film.revenue.toLocaleString('pt-BR', {
                     minimumFractionDigits: 2,
