@@ -43,15 +43,15 @@ export default function Detail({ location }) {
             <div>
               <div className="header">
                 <h2>{film.title}</h2>
+                <p>
+                  <strong>{film.vote_average}</strong>
+                  /10 | {new Date(film.release_date).toLocaleDateString('pt-BR')}
+                </p>
                 <div>
                   {film.genres.map(genre => (
                     <p key={genre.id}>{genre.name}</p>
                   ))}
                 </div>
-                <p>
-                  <strong>{film.vote_average}</strong>
-                  /10 | {new Date(film.release_date).toLocaleDateString('pt-BR')}
-                </p>
               </div>
             </div>
           </div>
