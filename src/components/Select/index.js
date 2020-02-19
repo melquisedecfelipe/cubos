@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { Select } from 'antd';
 
 const { Option } = Select;
 
-export default function SelectComponent({ onChange, option, placeholder, value }) {
+function SelectComponent({ onChange, option, value }) {
   return (
-    <Select placeholder={placeholder} value={value} onChange={onChange}>
+    <Select placeholder="Genero" value={value ? value : undefined} onChange={onChange}>
+      <Option value="">Nenhum</Option>
       {option
         ? option.map(elem => (
             <Option value={elem.id} key={elem.id}>
@@ -17,3 +18,5 @@ export default function SelectComponent({ onChange, option, placeholder, value }
     </Select>
   );
 }
+
+export default memo(SelectComponent);

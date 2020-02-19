@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 
 import './styles.scss';
 
-export default function Paginate({ currentPage, totalPages, paginate }) {
+function Paginate({ currentPage, totalPages, paginate }) {
   const pages = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
@@ -35,3 +35,5 @@ export default function Paginate({ currentPage, totalPages, paginate }) {
     </>
   );
 }
+
+export default memo(Paginate);
