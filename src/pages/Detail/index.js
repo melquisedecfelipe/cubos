@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 import api from '../../services/api';
-import { element } from 'prop-types';
 
 export default function Detail({ location }) {
   const [film, setFilm] = useState(undefined);
@@ -17,7 +16,6 @@ export default function Detail({ location }) {
     async function getFilm() {
       const { data } = await api.get(`movie/${id}?${queryString}`);
       setFilm(data);
-      console.log(data.genres);
     }
 
     async function getYoutube() {
@@ -95,6 +93,7 @@ export default function Detail({ location }) {
             </div>
             {youtube !== undefined && (
               <iframe
+                title={film.title}
                 width="100%"
                 height="400"
                 src={`https://www.youtube.com/embed/${youtube.key}`}
