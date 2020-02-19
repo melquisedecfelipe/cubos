@@ -150,6 +150,10 @@
             font-size: 20px;
           }
         }
+
+        > .search {
+          grid-template-columns: 1fr;
+        }
       }
     }
 
