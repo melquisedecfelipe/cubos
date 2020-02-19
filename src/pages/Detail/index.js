@@ -88,7 +88,13 @@ export default function Detail({ location }) {
               </div>
               <div>
                 <p>Receita</p>
-                <strong>{film.revenue}</strong>
+                <strong>
+                  {film.revenue.toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2,
+                    style: 'currency',
+                    currency: 'BRL',
+                  })}
+                </strong>
               </div>
             </div>
             {youtube !== undefined && (
