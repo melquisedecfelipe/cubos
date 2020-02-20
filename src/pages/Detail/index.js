@@ -66,7 +66,7 @@ export default function Detail({ location }) {
             </header>
             <div>
               <div className="header">
-                <h2 title={film.title}>{truncate(film.title, 20)}</h2>
+                <h2 title={film.title}>{truncate(film.title, 40)}</h2>
                 <div className="info">
                   <p>
                     Score: <strong>{film.vote_average}</strong>
