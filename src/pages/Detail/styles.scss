@@ -5,7 +5,7 @@
   > .film-header {
     display: flex;
     flex-direction: column;
-    padding: 20px 100px;
+    padding: 50px 100px;
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -75,7 +75,7 @@
   }
 
   > .film-detail {
-    padding: 20px 100px;
+    padding: 50px 100px;
     height: 100vh;
     overflow-y: scroll;
     width: 100%;
@@ -115,10 +115,6 @@
 
 @media screen and (min-width: 1920px) {
   .film-container {
-    > .film-header {
-      padding: 50px 100px;
-    }
-
     > .film-detail {
       padding: 50px;
     }
