@@ -1,6 +1,6 @@
 {
   "name": "Film",
-  "theme_color": "#4d4d4d",
+  "theme_color": "#000",
   "background_color": "#f5f5f5",
   "display": "standalone",
   "scope": "/",
