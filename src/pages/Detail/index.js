@@ -5,6 +5,8 @@ import './styles.scss';
 
 import api from '../../services/api';
 
+import truncate from '../../utils/truncate';
+
 export default function Detail({ location }) {
   const [film, setFilm] = useState(undefined);
   const [filmBg, setFilmBg] = useState('');
@@ -41,14 +43,6 @@ export default function Detail({ location }) {
     var hours = Math.floor(num / 60);
     var minutes = num % 60;
     return `${hours}h e ${minutes}m`;
-  };
-
-  const truncate = (string, size) => {
-    if (string.length > size) {
-      return string.slice(0, size) + '...';
-    } else {
-      return string;
-    }
   };
 
   return (
