@@ -95,7 +95,7 @@ function Home({ films, setFilms, getAll }) {
           )}
         </div>
 
-        {!(name !== '') && (
+        {name === '' && films.length !== 0 && (
           <div className="footer">
             <div className="paginate">
               <Paginate currentPage={currentPage} totalPages={totalPages} paginate={paginate} />
