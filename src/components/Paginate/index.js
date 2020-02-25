@@ -18,7 +18,7 @@ function Paginate({ currentPage, totalPages, paginate }) {
       />
       <ul className="paginate">
         {pages !== undefined &&
-          pages.map(elem => (
+          pages.splice(currentPage - 1, 5).map(elem => (
             <li
               key={elem}
               className={elem === currentPage ? '-active' : ''}

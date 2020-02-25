@@ -43,12 +43,12 @@ function Home({ films, setFilms, getAll }) {
         );
 
         setFilms(data.results);
-        setTotalPages(5);
+        setTotalPages(data.total_pages);
       } else {
         const { data } = await api.get(`discover/movie?${queryString}&page=${currentPage}`);
 
         setFilms(data.results);
-        setTotalPages(5);
+        setTotalPages(data.total_pages);
       }
 
       const storageFilms = JSON.parse(localStorage.getItem('films'));
