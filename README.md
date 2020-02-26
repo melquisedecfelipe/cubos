@@ -52,11 +52,8 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 # Clone this repository
 $ git clone https://github.com/melquisedecfelipe/film
 
-# Go into the repository
-$ cd film
-
-# Install dependencies
-$ npm i
+# Go into the repository and install dependencies
+$ cd film && npm i
 
 # Run frontend
 $ npm start
