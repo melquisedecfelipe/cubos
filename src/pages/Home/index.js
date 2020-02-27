@@ -37,15 +37,17 @@ function Home({ films, setFilms, getAll }) {
 
   useEffect(() => {
     async function getFilms() {
-      if (genre !== '') {
+      if (name !== '') {
         const { data } = await api.get(
-          `discover/movie?${queryString}&page=${currentPage}&with_genres=${genre}`,
+          `search/movie?${queryString}&page=${currentPage}&query=${name.replace(' ', '+')}`,
         );
 
         setFilms(data.results);
         setTotalPages(data.total_pages);
       } else {
-        const { data } = await api.get(`discover/movie?${queryString}&page=${currentPage}`);
+        const { data } = await api.get(
+          `discover/movie?${queryString}&page=${currentPage}&with_genres=${genre}`,
+        );
 
         setFilms(data.results);
         setTotalPages(data.total_pages);
@@ -56,7 +58,7 @@ function Home({ films, setFilms, getAll }) {
     }
 
     getFilms();
-  }, [getAll, setFilms, genre, currentPage, queryString]);
+  }, [getAll, setFilms, name, genre, currentPage, queryString]);
 
   const handleName = e => {
     setName(e.target.value);
@@ -65,8 +67,6 @@ function Home({ films, setFilms, getAll }) {
   const handleGenre = e => {
     setGenre(e.target.value);
   };
-
-  const filteredFilms = films.filter(film => film.title.toLowerCase().includes(name.toLowerCase()));
 
   return (
     <div className="home-container">
@@ -77,25 +77,25 @@ function Home({ films, setFilms, getAll }) {
         <div>
           <div className="header">
             <h2>Qual filme você quer ver hoje?</h2>
-            <p>Selecione os filtros e seja feliz.</p>
+            <p>Selecione um dos filtros e seja feliz.</p>
           </div>
           <div className="search">
-            <Input defaultValue={name} onBlur={handleName} />
-            <Select value={genre} onChange={handleGenre} option={genres} />
+            <Input defaultValue={name} onBlur={handleName} disabled={genre !== ''} />
+            <Select value={genre} onChange={handleGenre} option={genres} disabled={name !== ''} />
           </div>
         </div>
       </div>
 
       <div className="home-content">
         <div className="film">
-          {filteredFilms.length > 0 ? (
-            <Films films={filteredFilms} />
+          {films.length > 0 ? (
+            <Films films={films} />
           ) : (
             <h1>Não encontramos nenhum item com esse filtro... :(</h1>
           )}
         </div>
 
-        {name === '' && films.length !== 0 && (
+        {totalPages > 1 && (
           <div className="footer">
             <div className="paginate">
               <Paginate currentPage={currentPage} totalPages={totalPages} paginate={paginate} />
