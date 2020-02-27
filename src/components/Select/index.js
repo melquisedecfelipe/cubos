@@ -2,9 +2,15 @@ import React, { memo } from 'react';
 
 import './styles.scss';
 
-function SelectComponent({ onChange, option, value }) {
+function SelectComponent({ onChange, option, value, disabled }) {
   return (
-    <select placeholder="Genero" value={value ? value : undefined} onChange={onChange}>
+    <select
+      placeholder="Genero"
+      value={value ? value : undefined}
+      onChange={onChange}
+      disabled={disabled}
+      className={disabled ? '-disabled' : ''}
+    >
       <option value="">Nenhum</option>
       {option
         ? option.map(elem => (
