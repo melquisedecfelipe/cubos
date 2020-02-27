@@ -8,7 +8,6 @@ import Routes from './routes';
 
 import store from './store';
 import './App.scss';
-import 'antd/dist/antd.css';
 
 export default function App() {
   return (
