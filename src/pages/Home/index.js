@@ -63,7 +63,7 @@ function Home({ films, setFilms, getAll }) {
   };
 
   const handleGenre = e => {
-    setGenre(e);
+    setGenre(e.target.value);
   };
 
   const filteredFilms = films.filter(film => film.title.toLowerCase().includes(name.toLowerCase()));
