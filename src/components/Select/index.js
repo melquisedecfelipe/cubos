@@ -1,21 +1,19 @@
 import React, { memo } from 'react';
 
-import { Select } from 'antd';
-
-const { Option } = Select;
+import './styles.scss';
 
 function SelectComponent({ onChange, option, value }) {
   return (
-    <Select placeholder="Genero" value={value ? value : undefined} onChange={onChange}>
-      <Option value="">Nenhum</Option>
+    <select placeholder="Genero" value={value ? value : undefined} onChange={onChange}>
+      <option value="">Nenhum</option>
       {option
         ? option.map(elem => (
-            <Option value={elem.id} key={elem.id}>
+            <option value={elem.id} key={elem.id}>
               {elem.name}
-            </Option>
+            </option>
           ))
         : null}
-    </Select>
+    </select>
   );
 }
 
