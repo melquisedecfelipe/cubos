@@ -5,7 +5,6 @@ import './styles.scss';
 function SelectComponent({ onChange, option, value, disabled }) {
   return (
     <select
-      placeholder="Genero"
       value={value ? value : undefined}
       onChange={onChange}
       disabled={disabled}
