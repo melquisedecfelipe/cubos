@@ -5,7 +5,7 @@ import './styles.scss';
 function InputComponent({ defaultValue, onBlur, disabled }) {
   return (
     <input
-      placeholder="Nome"
+      placeholder="Filtrar por nome"
       type="text"
       value={defaultValue}
       onChange={onBlur}

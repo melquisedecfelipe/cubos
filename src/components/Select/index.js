@@ -10,7 +10,7 @@ function SelectComponent({ onChange, option, value, disabled }) {
       disabled={disabled}
       className={disabled ? '-disabled' : ''}
     >
-      <option value="">Gênero</option>
+      <option value="">Filtrar por gênero</option>
       {option
         ? option.map(elem => (
             <option value={elem.id} key={elem.id}>
