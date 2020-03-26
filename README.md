@@ -1,24 +1,23 @@
 <h1 align="center">
-    <img alt="Film" src="https://res.cloudinary.com/dtifsqadc/image/upload/v1582134429/favicon_ysdt4z.png" />
-    <br>
+    <img alt="Cubos" src="https://res.cloudinary.com/dtifsqadc/image/upload/v1585242450/icons-192_llx0ql.png" />
 </h1>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/film.svg">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/cubos.svg">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/melquisedecfelipe/film.svg">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/melquisedecfelipe/cubos.svg">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/melquisedecfelipe/film.svg">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/melquisedecfelipe/cubos.svg">
 
-  <a href="https://github.com/melquisedecfelipe/film/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/melquisedecfelipe/film.svg">
+  <a href="https://github.com/melquisedecfelipe/cubos/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/melquisedecfelipe/cubos.svg">
   </a>
 
-  <a href="https://github.com/melquisedecfelipe/film/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/melquisedecfelipe/film.svg">
+  <a href="https://github.com/melquisedecfelipe/cubos/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/melquisedecfelipe/cubos.svg">
   </a>
 
-  <img alt="GitHub" src="https://img.shields.io/github/license/melquisedecfelipe/film.svg">
+  <img alt="GitHub" src="https://img.shields.io/github/license/melquisedecfelipe/cubos.svg">
 </p>
 
 <p align="center">
@@ -49,10 +48,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/melquisedecfelipe/film
+$ git clone https://github.com/melquisedecfelipe/cubos
 
 # Go into the repository and install dependencies
-$ cd film && npm i
+$ cd cubos && npm i
 
 # Run frontend
 $ npm start
@@ -60,7 +59,7 @@ $ npm start
 
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/melquisedecfelipe/Film/blob/master/LICENSE) for more information.
+This project is under the MIT license. See the [LICENSE](https://github.com/melquisedecfelipe/cubos/blob/master/LICENSE) for more information.
 
 ---
 
