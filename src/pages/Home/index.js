@@ -72,7 +72,7 @@ function Home({ films, setFilms, getAll }) {
     <div className="home-container">
       <div className="home-search">
         <header>
-          <Link to="/">FILM</Link>
+          <Link to="/">CUBOS</Link>
         </header>
         <div>
           <div className="header">

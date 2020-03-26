@@ -56,7 +56,7 @@ export default function Detail({ location }) {
             }}
           >
             <header>
-              <Link to="/">FILM</Link>
+              <Link to="/">CUBOS</Link>
             </header>
             <div>
               <div className="header">
