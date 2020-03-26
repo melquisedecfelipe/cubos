@@ -1,6 +1,6 @@
-var doCache = false;
+const doCache = false;
 
-var CACHE_NAME = 'my-pwa-cache-v1';
+const CACHE_NAME = 'my-pwa-cache-v1';
 
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME];
@@ -9,7 +9,7 @@ self.addEventListener('activate', event => {
       Promise.all(
         keyList.map(key => {
           if (!cacheWhitelist.includes(key)) {
-            console.log('Deleting cache: ' + key);
+            console.log(`Deleting cache: ${key}`);
             return caches.delete(key);
           }
         }),
@@ -18,10 +18,10 @@ self.addEventListener('activate', event => {
   );
 });
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', event => {
   if (doCache) {
     event.waitUntil(
-      caches.open(CACHE_NAME).then(function(cache) {
+      caches.open(CACHE_NAME).then(cache => {
         fetch('asset-manifest.json')
           .then(response => {
             response.json();
@@ -36,12 +36,10 @@ self.addEventListener('install', function(event) {
   }
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
   if (doCache) {
     event.respondWith(
-      caches.match(event.request).then(function(response) {
-        return response || fetch(event.request);
-      }),
+      caches.match(event.request).then(response => response || fetch(event.request)),
     );
   }
 });
