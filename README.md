@@ -1,8 +1,6 @@
-<h1 align="center">
-    <img alt="Cubos" src="https://res.cloudinary.com/dtifsqadc/image/upload/v1585242450/icons-192_llx0ql.png" />
-</h1>
+<h1>Cubos</h1>
 
-<p align="center">
+<p>
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/cubos.svg">
 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/melquisedecfelipe/cubos.svg">
@@ -20,7 +18,7 @@
   <img alt="GitHub" src="https://img.shields.io/github/license/melquisedecfelipe/cubos.svg">
 </p>
 
-<p align="center">
+<p>
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
