@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 
 import './styles.scss';
 
+import { useDebounce } from 'use-debounce';
+
 import Films from '../../components/Films';
 import Input from '../../components/Input';
 import Paginate from '../../components/Paginate';
@@ -15,6 +17,7 @@ import { Creators as FilmActions } from '../../store/ducks/film';
 
 function Home({ films, setFilms, getAll }) {
   const [name, setName] = useState('');
+  const [debouncedNname] = useDebounce(name, 1000);
   const [genre, setGenre] = useState('');
   const [genres, setGenres] = useState('');
 
@@ -37,9 +40,12 @@ function Home({ films, setFilms, getAll }) {
 
   useEffect(() => {
     async function getFilms() {
-      if (name !== '') {
+      if (debouncedNname !== '') {
         const { data } = await api.get(
-          `search/movie?${queryString}&page=${currentPage}&query=${name.replace(' ', '+')}`,
+          `search/movie?${queryString}&page=${currentPage}&query=${debouncedNname.replace(
+            ' ',
+            '+',
+          )}`,
         );
 
         setFilms(data.results);
@@ -58,7 +64,7 @@ function Home({ films, setFilms, getAll }) {
     }
 
     getFilms();
-  }, [getAll, setFilms, name, genre, currentPage, queryString]);
+  }, [getAll, setFilms, debouncedNname, genre, currentPage, queryString]);
 
   const handleName = e => {
     setName(e.target.value);
